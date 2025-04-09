@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - HamzaApp
+name: Build and deploy PHP app to Azure Web App - hamzaapp
 
 on:
   push:
@@ -64,15 +64,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5767F49C969C4C25B1BD99ED60403AEE }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C65D2F1F6B2842519E0B0DB6A64D1FF5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_03C735065B0D47BABB9948509DA451A8 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F395D435762B45ABBB88B1615F3D664A }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0EA772AA2BB04773923535BD8E6FBC50 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_280617C927694E229C7D0107ED323663 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'HamzaApp'
+          app-name: 'hamzaapp'
           slot-name: 'Production'
           package: .
           
